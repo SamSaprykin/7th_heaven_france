@@ -1,0 +1,50 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "src/data/posts"
+    create: true
+    fields:
+      - { label: "title", name: "title", widget: "string"}
+      - { label: "slug", name: "slug", widget: "string"}  
+      - { label: "date", name: "date" }
+      - { label: "featuredImage", name: "featuredImage", widget: "image"}    
+      - { label: "Body", name: "body", widget: "markdown"}
+  - name: "products"
+    label: "Products"
+    folder: "src/data/products"
+    create: true
+    fields:
+      - { label: "title", name: "title", widget: "string"}
+      - { label: "id", name: "id", widget: "string"}
+      - { label: "benefits", name: "benefits", widget: "string"}
+      - { label: "slug", name: "slug", widget: "string"}
+      - { label: "category", name: "category", widget: "string"}  
+      - { label: "Body", name: "body", widget: "markdown"}
+      - { label: "ingredientsProduct", name: "ingredientsProduct", widget: "image"} 
+      - { label: "productImage", name: "productImage", widget: "image"} 
+      - { label: "videoImage", name: "videoImage", widget: "image"} 
+      - { label: "bgImage", name: "bgImage", widget: "image"}  
+      - { label: "new", name: "new",widget: "boolean", default: false}
+  - name: "productsHomme"
+    label: "ProductsHomme"
+    folder: "src/data/hommeProduit"
+    create: true
+    fields:
+      - { label: "title", name: "title", widget: "string"}
+      - { label: "id", name: "id", widget: "string"}
+      - { label: "benefits", name: "benefits", widget: "string"}
+      - { label: "slug", name: "slug", widget: "string"}  
+      - { label: "Body", name: "body", widget: "markdown"}
+      - { label: "ingredientsProduct", name: "ingredientsProduct", widget: "image"} 
+      - { label: "productImage", name: "productImage", widget: "image"} 
+      - { label: "videoImage", name: "videoImage", widget: "image"} 
+      - { label: "bgImage", name: "bgImage", widget: "image"} 
+      - { label: "new", name: "new",widget: "boolean", default: false}
+      
